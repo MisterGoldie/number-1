@@ -51,7 +51,7 @@ app.frame('/thirdframe', (c) => {
 
 app.frame('/fourthframe', (c) => {
   return c.res({
-    action: '/',
+    action: '/fifthframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmeKD5Nr9gF21XSmX7d8HWqyEpo1rRgMtXHwmuKUWpk4pe",
     intents: [
       <Button>Next</Button>
@@ -66,7 +66,7 @@ app.frame('/fifthframe', (c) => {
     intents: [
       <Button.Reset>Back</Button.Reset>,
       <Button.Link href="https://polygonscan.com/token/0x3150e01c36ad3af80ba16c1836efcd967e96776e#balances">Polygonscan</Button.Link>,
-      <Button.Link href="https://mint.club/airdrops/polygon/235">Get Goldies</Button.Link>,
+      <Button.Link href="https://mint.club/airdrops/polygon/235">Get $Goldies</Button.Link>,
     ],
   })
 })
