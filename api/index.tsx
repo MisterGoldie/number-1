@@ -31,7 +31,7 @@ app.frame('/', (c) => {
 
 app.frame('/thirdframe', (c) => {
   return c.res({
-    action: '/secondframe',
+    action: '/',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPGwsMPguKqegVRQxuaahmLRENwRF8U9zAoVoyqDQQJhy",
     intents: [
       <Button.Reset>Back</Button.Reset>,
