@@ -14,32 +14,65 @@ export const app = new Frog({
   basePath: '/api',
   // Supply a Hub to enable frame verification.
   hub: neynar({ apiKey: '71332A9D-240D-41E0-8644-31BD70E64036' }),
-  title: 'Goldie frame',
+  title: 'Goldies token frame',
 })
 
-app.frame('/', (c) => {
+app.frame('/firstframe', (c) => {
   const { buttonValue, inputText, status } = c
   const fruit = inputText || buttonValue
   return c.res({
-    action: '/thirdframe',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmSoRCo92SbBdxLCrbzGJHpMigimF5fQT7BTwhZF2NMU59",
+    action: '/secondframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmcZfSstKLCy6urQVW55V5j42Y6pK1bHo1oJo64jzBknDG",
     intents: [
       <Button>Enter</Button>,
     ],
   })
 })
 
-app.frame('/thirdframe', (c) => {
+app.frame('/secondframe', (c) => {
   return c.res({
-    action: '/',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPGwsMPguKqegVRQxuaahmLRENwRF8U9zAoVoyqDQQJhy",
+    action: '/firstframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmUP1BcQPJHPRLuWAwgdBEbYjeRPtfztqYzdNAtCEip1qm",
     intents: [
       <Button.Reset>Back</Button.Reset>,
-      <Button.Link href="https://x.com/xThePod">X</Button.Link>,
+      <Button>Next</Button>
     ],
   })
 })
 
+app.frame('/thirdframe', (c) => {
+  return c.res({
+    action: '/secondframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPY6MGh1n4SRkLUpnpYuebUjwqQbbCw6tc8A53ZVKncbM",
+    intents: [
+      <Button.Reset>Back</Button.Reset>,
+      <Button>Next</Button>
+    ],
+  })
+})
+
+app.frame('/fourthframe', (c) => {
+  return c.res({
+    action: '/thirdframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmeKD5Nr9gF21XSmX7d8HWqyEpo1rRgMtXHwmuKUWpk4pe",
+    intents: [
+      <Button.Reset>Back</Button.Reset>,
+      <Button>Next</Button>
+    ],
+  })
+})
+
+app.frame('/fifthframe', (c) => {
+  return c.res({
+    action: '/',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPY6MGh1n4SRkLUpnpYuebUjwqQbbCw6tc8A53ZVKncbM",
+    intents: [
+      <Button.Reset>Back</Button.Reset>,
+      <Button.Link href="https://polygonscan.com/token/0x3150e01c36ad3af80ba16c1836efcd967e96776e#balances">Polygonscan</Button.Link>,
+      <Button.Link href="https://mint.club/airdrops/polygon/235">Get Goldies</Button.Link>,
+    ],
+  })
+})
 
 // @ts-ignore
 const isEdgeFunction = typeof EdgeFunction !== 'undefined'
