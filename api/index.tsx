@@ -34,7 +34,6 @@ app.frame('/secondframe', (c) => {
     action: '/',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmUP1BcQPJHPRLuWAwgdBEbYjeRPtfztqYzdNAtCEip1qm",
     intents: [
-      <Button.Reset>Back</Button.Reset>,
       <Button>Next</Button>
     ],
   })
@@ -45,7 +44,6 @@ app.frame('/thirdframe', (c) => {
     action: '/secondframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPY6MGh1n4SRkLUpnpYuebUjwqQbbCw6tc8A53ZVKncbM",
     intents: [
-      <Button.Reset>Back</Button.Reset>,
       <Button>Next</Button>
     ],
   })
@@ -56,7 +54,6 @@ app.frame('/fourthframe', (c) => {
     action: '/thirdframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmeKD5Nr9gF21XSmX7d8HWqyEpo1rRgMtXHwmuKUWpk4pe",
     intents: [
-      <Button.Reset>Back</Button.Reset>,
       <Button>Next</Button>
     ],
   })
