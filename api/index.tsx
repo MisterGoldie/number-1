@@ -14,7 +14,7 @@ export const app = new Frog({
   basePath: '/api',
   // Supply a Hub to enable frame verification.
   hub: neynar({ apiKey: '71332A9D-240D-41E0-8644-31BD70E64036' }),
-  title: 'Goldies frame',
+  title: 'Goldie frame',
 })
 
 app.frame('/', (c) => {
@@ -32,10 +32,22 @@ app.frame('/', (c) => {
 app.frame('/secondframe', (c) => {
   return c.res({
     action: '/thirdframe',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPGwsMPguKqegVRQxuaahmLRENwRF8U9zAoVoyqDQQJhy",
+    image: "https://ipfs.io/ipfs/QmQ8idnfAyfJeLBNbKqaBuoyx1BNh5DJK1Ryup3eLQ2Axs/podlogo.png",
     intents: [
       <Button.Reset>Back</Button.Reset>,
-      <Button.Link href="https://x.com/xThePod">X</Button.Link>,
+      <Button>Next</Button>,
+      <Button.Link href="https://opensea.io/GoldiesNFTart">Opensea</Button.Link>,
+    ],
+  })
+})
+
+app.frame('/thirdframe', (c) => {
+  return c.res({
+    action: '/secondframe',
+    image: "https://ipfs.io/ipfs/QmQ8idnfAyfJeLBNbKqaBuoyx1BNh5DJK1Ryup3eLQ2Axs/green.png",
+    intents: [
+      <Button.Reset>Home</Button.Reset>,
+      <Button.Link href="https://x.com/GoldiesNFTart">X</Button.Link>,
     ],
   })
 })
