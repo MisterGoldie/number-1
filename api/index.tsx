@@ -61,12 +61,22 @@ app.frame('/fourthframe', (c) => {
 
 app.frame('/fifthframe', (c) => {
   return c.res({
-    action: '/',
+    action: '/sixthframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPY6MGh1n4SRkLUpnpYuebUjwqQbbCw6tc8A53ZVKncbM",
+    intents: [
+      <Button.Reset>Next</Button.Reset>,
+    ],
+  })
+})
+
+app.frame('/sixthframe', (c) => {
+  return c.res({
+    action: '/',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmQ7U4P9K9Pxw5GvCEwfQLzNTJz26v2Z9abzW2GZQHYQHZ",
     intents: [
       <Button.Reset>Back</Button.Reset>,
       <Button.Link href="https://polygonscan.com/token/0x3150e01c36ad3af80ba16c1836efcd967e96776e#balances">Polygonscan</Button.Link>,
-      <Button.Link href="https://mint.club/airdrops/polygon/235">Get Goldies</Button.Link>,
+      <Button.Link href="https://mint.club/airdrops/polygon/235">Get $Goldies</Button.Link>,
     ],
   })
 })
