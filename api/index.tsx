@@ -17,7 +17,7 @@ export const app = new Frog({
   title: 'Goldies token frame',
 })
 
-app.frame('/firstframe', (c) => {
+app.frame('/', (c) => {
   const { buttonValue, inputText, status } = c
   const fruit = inputText || buttonValue
   return c.res({
@@ -31,7 +31,7 @@ app.frame('/firstframe', (c) => {
 
 app.frame('/secondframe', (c) => {
   return c.res({
-    action: '/firstframe',
+    action: '/',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmUP1BcQPJHPRLuWAwgdBEbYjeRPtfztqYzdNAtCEip1qm",
     intents: [
       <Button.Reset>Back</Button.Reset>,
