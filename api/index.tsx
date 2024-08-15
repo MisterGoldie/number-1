@@ -32,22 +32,10 @@ app.frame('/', (c) => {
 app.frame('/secondframe', (c) => {
   return c.res({
     action: '/thirdframe',
-    image: "https://ipfs.io/ipfs/QmQ8idnfAyfJeLBNbKqaBuoyx1BNh5DJK1Ryup3eLQ2Axs/podlogo.png",
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPGwsMPguKqegVRQxuaahmLRENwRF8U9zAoVoyqDQQJhy",
     intents: [
       <Button.Reset>Back</Button.Reset>,
-      <Button>Next</Button>,
-      <Button.Link href="https://opensea.io/GoldiesNFTart">Opensea</Button.Link>,
-    ],
-  })
-})
-
-app.frame('/thirdframe', (c) => {
-  return c.res({
-    action: '/secondframe',
-    image: "https://ipfs.io/ipfs/QmQ8idnfAyfJeLBNbKqaBuoyx1BNh5DJK1Ryup3eLQ2Axs/green.png",
-    intents: [
-      <Button.Reset>Home</Button.Reset>,
-      <Button.Link href="https://x.com/GoldiesNFTart">X</Button.Link>,
+      <Button.Link href="https://x.com/xThePod">X</Button.Link>,
     ],
   })
 })
