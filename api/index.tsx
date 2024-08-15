@@ -21,7 +21,7 @@ app.frame('/', (c) => {
   const { buttonValue, inputText, status } = c
   const fruit = inputText || buttonValue
   return c.res({
-    action: '/secondframe',
+    action: '/thirdframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmSoRCo92SbBdxLCrbzGJHpMigimF5fQT7BTwhZF2NMU59",
     intents: [
       <Button>Enter</Button>,
@@ -29,28 +29,17 @@ app.frame('/', (c) => {
   })
 })
 
-app.frame('/secondframe', (c) => {
+app.frame('/thirdframe', (c) => {
   return c.res({
-    action: '/thirdframe',
-    image: "https://ipfs.io/ipfs/QmQ8idnfAyfJeLBNbKqaBuoyx1BNh5DJK1Ryup3eLQ2Axs/podlogo.png",
+    action: '/secondframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPGwsMPguKqegVRQxuaahmLRENwRF8U9zAoVoyqDQQJhy",
     intents: [
       <Button.Reset>Back</Button.Reset>,
-      <Button>Next</Button>,
-      <Button.Link href="https://opensea.io/GoldiesNFTart">Opensea</Button.Link>,
+      <Button.Link href="https://x.com/xThePod">X</Button.Link>,
     ],
   })
 })
 
-app.frame('/thirdframe', (c) => {
-  return c.res({
-    action: '/secondframe',
-    image: "https://ipfs.io/ipfs/QmQ8idnfAyfJeLBNbKqaBuoyx1BNh5DJK1Ryup3eLQ2Axs/green.png",
-    intents: [
-      <Button.Reset>Home</Button.Reset>,
-      <Button.Link href="https://x.com/GoldiesNFTart">X</Button.Link>,
-    ],
-  })
-})
 
 // @ts-ignore
 const isEdgeFunction = typeof EdgeFunction !== 'undefined'
