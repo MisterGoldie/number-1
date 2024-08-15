@@ -22,7 +22,7 @@ app.frame('/', (c) => {
   const fruit = inputText || buttonValue
   return c.res({
     action: '/secondframe',
-    image: "https://ipfs.io/ipfs/bafybeifeeivouhaesyuqnb3znap2ehfeu2kirca2x7myn4u5fabhhys44m/Testframe.png",
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmSoRCo92SbBdxLCrbzGJHpMigimF5fQT7BTwhZF2NMU59",
     intents: [
       <Button>Enter</Button>,
     ],
