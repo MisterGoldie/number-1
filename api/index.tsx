@@ -14,7 +14,7 @@ export const app = new Frog({
   basePath: '/api',
   // Supply a Hub to enable frame verification.
   hub: neynar({ apiKey: '71332A9D-240D-41E0-8644-31BD70E64036' }),
-  title: 'Goldies frame',
+  title: 'Goldie frame',
 })
 
 app.frame('/', (c) => {
