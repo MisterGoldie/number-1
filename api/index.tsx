@@ -21,7 +21,8 @@ app.frame('/', (c) => {
   const { buttonValue, inputText, status } = c
   const fruit = inputText || buttonValue
   return c.res({
-  image: "https://ipfs.io/ipfs/bafybeifeeivouhaesyuqnb3znap2ehfeu2kirca2x7myn4u5fabhhys44m/Testframe.png",
+    action: '/secondframe',
+    image: "https://ipfs.io/ipfs/bafybeifeeivouhaesyuqnb3znap2ehfeu2kirca2x7myn4u5fabhhys44m/Testframe.png",
     intents: [
       <Button>Enter</Button>,
     ],
