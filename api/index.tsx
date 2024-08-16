@@ -24,7 +24,6 @@ app.frame('/', (c) => {
     action: '/secondframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmcZfSstKLCy6urQVW55V5j42Y6pK1bHo1oJo64jzBknDG",
     intents: [
-      <Button action="/">Back</Button>,
       <Button>Enter</Button>,
     ],
   })
@@ -56,7 +55,7 @@ app.frame('/fourthframe', (c) => {
     action: '/',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmNrrcf6YKcjqkd6jvJcJezwYCK5rRRXftytcsaA1rrApT",
     intents: [
-      <Button.Reset>Back</Button.Reset>,
+      <Button.Reset>Home</Button.Reset>,
       <Button.Link href="https://polygonscan.com/token/0x3150e01c36ad3af80ba16c1836efcd967e96776e#balances">Polygonscan</Button.Link>,
       <Button.Link href="https://mint.club/airdrops/polygon/236">Get $GOLDIES</Button.Link>,
     ],
