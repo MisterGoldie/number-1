@@ -10,7 +10,8 @@
   "dependencies": {
     "ethers": "^6.13.2",
     "frog": "latest",
-    "hono": "^4"
+    "hono": "^4",
+    "thirdweb": "^5.46.1"
   },
   "devDependencies": {
     "tsx": "^4.7.1",

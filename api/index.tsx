@@ -14,7 +14,7 @@ export const app = new Frog({
   basePath: '/api',
   // Supply a Hub to enable frame verification.
   hub: neynar({ apiKey: '71332A9D-240D-41E0-8644-31BD70E64036' }),
-  title: 'Goldies token frame',
+  title: 'About me',
 })
 
 app.frame('/', (c) => {
@@ -24,6 +24,7 @@ app.frame('/', (c) => {
     action: '/secondframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmcZfSstKLCy6urQVW55V5j42Y6pK1bHo1oJo64jzBknDG",
     intents: [
+      <Button action="/">Back</Button>,
       <Button>Enter</Button>,
     ],
   })
@@ -44,6 +45,7 @@ app.frame('/thirdframe', (c) => {
     action: '/fourthframe',
     image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPY6MGh1n4SRkLUpnpYuebUjwqQbbCw6tc8A53ZVKncbM",
     intents: [
+      <Button action="/secondframe">Back</Button>,
       <Button>Next</Button>
     ],
   })
@@ -56,7 +58,7 @@ app.frame('/fourthframe', (c) => {
     intents: [
       <Button.Reset>Back</Button.Reset>,
       <Button.Link href="https://polygonscan.com/token/0x3150e01c36ad3af80ba16c1836efcd967e96776e#balances">Polygonscan</Button.Link>,
-      <Button.Link href="https://mint.club/airdrops/polygon/236">Get $Goldies</Button.Link>,
+      <Button.Link href="https://mint.club/airdrops/polygon/236">Get $GOLDIES</Button.Link>,
     ],
   })
 })
