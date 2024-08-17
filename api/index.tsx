@@ -22,7 +22,7 @@ app.frame('/', (c) => {
   const fruit = inputText || buttonValue
   return c.res({
     action: '/secondframe',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmcZfSstKLCy6urQVW55V5j42Y6pK1bHo1oJo64jzBknDG",
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmcQPXZ9dGXpyGQjbGWJP5S34MvDQzoikmb9KrUoHY3voq",
     intents: [
       <Button>Enter</Button>,
     ],
@@ -32,8 +32,9 @@ app.frame('/', (c) => {
 app.frame('/secondframe', (c) => {
   return c.res({
     action: '/thirdframe',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmUP1BcQPJHPRLuWAwgdBEbYjeRPtfztqYzdNAtCEip1qm",
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmQ7SsGT3x5SWkDrknY5xHyCAk6CbVzTXCd4Ps2mhT4bRG",
     intents: [
+      <Button.Link href="https://opensea.io/collection/scary-garys">Scary Garys</Button.Link>,
       <Button>Next</Button>
     ],
   })
@@ -42,8 +43,9 @@ app.frame('/secondframe', (c) => {
 app.frame('/thirdframe', (c) => {
   return c.res({
     action: '/fourthframe',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmPY6MGh1n4SRkLUpnpYuebUjwqQbbCw6tc8A53ZVKncbM",
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmSSiFks8rf2M3NoNYqRkT9nyt7WYPCM97eJHgoRwviUd6",
     intents: [
+      <Button.Link href="https://www.rollingstone.com/culture/culture-features/rolling-stone-and-coinbase-nft-drop-1292861/">Article</Button.Link>,
       <Button action="/secondframe">Back</Button>,
       <Button>Next</Button>
     ],
@@ -52,19 +54,42 @@ app.frame('/thirdframe', (c) => {
 
 app.frame('/fourthframe', (c) => {
   return c.res({
-    action: '/',
-    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmNrrcf6YKcjqkd6jvJcJezwYCK5rRRXftytcsaA1rrApT",
+    action: '/fifthframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmQBws3xymriiiKy3dommdrTCZB5xEjrBCAvjrar6fhNPR",
     intents: [
-      <Button.Reset>Home</Button.Reset>,
-      <Button.Link href="https://polygonscan.com/token/0x3150e01c36ad3af80ba16c1836efcd967e96776e#balances">Polygonscan</Button.Link>,
-      <Button.Link href="https://mint.club/airdrops/polygon/236">Get $GOLDIES</Button.Link>,
+      <Button.Link href="https://ordex.io/collection/eth/cupscriptions">CUPS</Button.Link>,
+      <Button action="/thirdframe">Back</Button>,
+      <Button>Next</Button>
+    ],
+  })
+})
+
+app.frame('/fifthframe', (c) => {
+  return c.res({
+    action: '/sixthframe',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmfATrgC6cJjhtTxRveUSi2jZagW6gjV5eVZjP9JdGmfQF",
+    intents: [
+      <Button action="/fourthframe">Back</Button>,
+      <Button>Next</Button>
+    ],
+  })
+})
+
+app.frame('/sixthframe', (c) => {
+  return c.res({
+    action: '/',
+    image: "https://amaranth-adequate-condor-278.mypinata.cloud/ipfs/QmXueVTE3qXMXVA5a9xvksLu8uFu2h3UdBWz57K3dCLRgo",
+    intents: [
+      <Button action="/fifthframe">Back</Button>,
+      <Button action="/">Home</Button>,
+      
     ],
   })
 })
 
 // @ts-ignore
 const isEdgeFunction = typeof EdgeFunction !== 'undefined'
-const isProduction = isEdgeFunction || import.meta.env?.MODE !== 'development'
+const isProduction = isEdgeFunction || process.env?.MODE !== 'development'
 devtools(app, isProduction ? { assetsPath: '/.frog' } : { serveStatic })
 
 export const GET = handle(app)
